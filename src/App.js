@@ -313,12 +313,42 @@ class Section extends React.Component{
     }
 }
 
+
+//Pokazywanie sie liter
+class TextTyper extends React.Component{
+    constructor(props){
+        super(props);
+        this.state={
+            text:this.props.text[0] //pierwsza litera
+        };
+    }
+    componentDidMount(){
+        let counter=1;
+        this.intervalId=setInterval(()=>{
+            if(counter<this.props.text.length){
+                this.setState({
+                    text: this.state.text + this.props.text[counter]
+                });
+                counter++;
+            }else{
+                clearTimeout(this.intervalId)
+            }
+        },200)
+    }
+
+    render(){
+        return <h1>{this.state.text}</h1>
+    }
+}
+
+
 class Header extends React.Component{
     render(){
         return(
             <div className="header">
-                <h1>Pomysł na weekend</h1>
-
+                {/*<h1>Pomysł na weekend</h1>*/}
+                <TextTyper text="Pomysł na weekend..."/>
+                {/*<Slider sliderWidth="400" sliderHeight="250"/>*/}
             </div>
 
         )
@@ -422,6 +452,84 @@ class MainTemplate extends React.Component{
            </div>
        )
    }
+}
+
+//SLIDER
+class Slider extends React.Component{
+    constructor(props){
+        super(props);
+        this.state={
+            slider: [1,2,3,4],
+            activateIndex:1,
+            left:0
+             }
+        }
+
+        prevSlide = ()=>{
+        this.setState({
+            activeIndex:this.state.activateIndex-1,
+            left:this.state.left
+        });
+            if (this.state.activeIndex === 1) {
+                this.setState({
+                    activeIndex: this.state.activeIndex + this.state.slider.length - 1,
+                    left: this.state.left - this.props.sliderWidth * (this.state.slider.length - 1)
+                })
+            }
+        };
+
+    nextSlide = ()=> {
+        this.setState({
+            activeIndex: this.state.activateIndex + 1,
+            left: this.state.left
+        });
+        if (this.state.activeIndex === this.state.slider.length) {
+            this.setState({
+                activeIndex: this.state.activeIndex - this.state.slider.length + 1,
+                left: 0
+            })
+        }
+
+    };
+
+clickIndicator=(e)=> {
+    this.setState({
+        activeIndex: parseInt(e.target.textContent),
+        left: this.props.sliderWidth - parseInt(e.target.textContent) * this.props.sliderWidth
+    })
+};
+
+    render(){
+        return(
+            <div>
+                <div  className="slider-wrapper">
+                    <ul className="slider">
+                        {this.state.slider.map(function(item,index) {
+                            return (
+                                <li className={index+1 === this.state.activeIndex ? 'slider-item' : 'hide'}>{item}</li>
+
+                            )
+                        },this)
+                        }
+                    </ul>
+                </div>
+                <div className="buttons-wrapper">
+                    <button className="prev-button" onClick={this.prevSlide}></button>
+                    <button className="next-button" onClick={this.nextSlide}></button>
+                </div>
+                <div className="indicators-wrapper">
+                    <ul className="indicators">
+                        {this.state.slider.map(function(item,index) {
+                            return (
+                                <li className={index+1 === this.state.activeIndex ? 'active-indicator' : ''} onClick={this.clickIndicator}>{index+1}</li>
+                            )
+                        },this)
+                        }
+                    </ul>
+                </div>
+            </div>
+        )
+    }
 }
 
 class App extends React.Component{
