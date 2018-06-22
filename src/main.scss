@@ -1,0 +1,381 @@
+
+*{
+  padding: 0;
+  margin: 0;
+}
+
+.background{
+  background-color:#E3F4FF;
+}
+
+.container{
+  width: 1256px;
+  margin: 0 auto;
+}
+
+.section div{
+  padding: 60px;
+  font-size: 20px;
+  text-align: -webkit-center;
+  font-family: 'Dancing Script', cursive;
+  background-color: #ADC8F7;
+  border: 2px dotted #4984EB;
+  margin-top: 40px;
+}
+
+.header{
+  text-align: center;
+  height: 600px;
+  background-image: url("http://4.bp.blogspot.com/-VvriY0pJXBQ/VkcZOBIuzKI/AAAAAAAAgi4/dQgtKUbqhwQ/s1600/7040162-mountains-background.jpg");
+  font-family: 'Dancing Script', cursive;
+  font-size: 60px;
+  color: white;
+}
+
+.header1 {
+  text-align: center;
+  height: 600px;
+  background-image: url("http://www.ekinnolab.eu/wp-content/uploads/2016/11/Fotografia-Architektury-Pozna%C5%84-_06.jpg");
+  font-family: 'Dancing Script', cursive;
+  font-size: 60px;
+  color: white;
+  background-size: cover;
+}
+
+h1{
+  padding-top: 230px;
+}
+
+h2{
+  text-align: left;
+  padding-bottom: 30px;
+}
+
+main {
+  height: 400px;
+  padding-bottom: 70px;
+}
+
+.squareDiv{
+  height: 400px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.square{
+  width: 200px;
+  height: 200px;
+  border: 2px solid #4984EB;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.square1{
+  width: 200px;
+  height: 200px;
+  border: 2px solid #4984EB;
+  border-radius: 50%;
+  align-self: flex-end;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+span{
+  font-size: 40px;
+  font-family: 'Dancing Script', cursive;
+  color:white;
+}
+
+div.img1{
+  background-image: url("https://www.sport-events.pl/zdjecia/o/chromastock-95187134_201604101433.jpg");
+  background-size: cover;
+}
+
+div.img1:hover{
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+div.img2{
+  background-image: url("https://www.nadbaltykiem.pl/img/newsy/d_98e9888bd6d904bb646a076e067c6cd6.jpg");
+  background-size: cover;
+}
+
+div.img2:hover{
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+div.img3{
+  background-image: url("http://www.topnaj.pl/wp-content/uploads/2016/09/najwieksze-miasta-w-polsce-pod-wzgledem-ludnosci.jpg");
+  background-size: cover;
+}
+
+div.img3:hover{
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+div.img4{
+  background-image: url("http://www.newsweek.pl/g/crop/0/-1050/newsweek/635501134222598381.jpg");
+  background-size: cover;
+}
+
+div.img4:hover{
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+div.img5{
+  background-image: url("https://comps.canstockphoto.com/funny-tv-cartoon-image_csp10941670.jpg");
+  background-size: cover;
+  color:blue;
+}
+
+div.img5:hover{
+  opacity: 0.8;
+  cursor: pointer;
+  background-image: url("https://akwaria.robizoo.pl/images/153c7c971d209f73962ab607ced924a8.jpg");
+}
+
+.article{
+  height: 400px;
+  background-color: #ADC8F7;
+  display: flex;
+  justify-content: center;
+  margin-top:40px;
+}
+
+.description{
+  width:400px;
+  height: 300px;
+  font-family: 'Dancing Script', cursive;
+  font-size: 20px;
+  color: white;
+  padding:10px;
+  text-align: -webkit-center;
+  margin-top: 40px;
+  border: 2px dotted #4984EB;
+}
+
+h3{
+  padding-bottom: 40px;
+  padding-top: 70px;
+  color: #4984EB;;
+}
+
+.game{
+  width:400px;
+  height: 300px;
+  border: 2px dotted #4984EB;
+  padding: 10px;
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.number{
+  width: 200px;
+  height: 200px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  position: relative;
+}
+
+.number span{
+    font-size: 50px;
+    font-family: 'Dancing Script', cursive;
+    color:white;
+    position: absolute;
+}
+
+.number .span1{
+  font-size: 50px;
+  font-family: 'Dancing Script', cursive;
+  color:blue;
+  position: absolute;
+  padding-top: 30px;
+  text-align: -webkit-center;
+}
+
+button{
+  width: 300px;
+  height: 50px;
+  border-radius: 20px;
+  background-color: #E3F4FF;
+  border:none;
+  margin-top: 10px;
+}
+
+.footer{
+  height: 200px;
+  margin-top: 20px;
+  background-color: #4984EB;
+}
+
+.hamburger{
+  width: 250px;
+  height: 530px;
+  background-color:#E3F4FF ;
+  opacity: 0.5;
+  //border: 1px solid red;
+  position: absolute;
+  //margin-top: -70px;
+
+}
+
+.position{
+  position: absolute;
+}
+
+.fas{
+  font-size: 40px;
+  color: white;
+  padding: 15px;
+}
+
+.list{
+  font-size: 30px;
+  line-height: 60px;
+  color: darkblue;
+  padding-top: 70px;
+  cursor:pointer;
+}
+
+.list li{
+  border-bottom: 2px dotted blue;
+}
+
+.links{
+  color:white;
+  text-decoration: none;
+}
+
+.links1{
+  text-decoration: none;
+}
+
+.images{
+  height: 100%;
+  width: 100%;
+}
+
+.boxes{
+  height: 504px;
+  width: 504px;
+  border:3px dotted dodgerblue;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.p{
+  text-align: center;
+  font-size: 50px;
+  font-family: 'Dancing Script', cursive;
+  margin: 0;
+}
+
+.aboutUs{
+  height: 500px;
+  width: 500px;
+  border:3px dotted dodgerblue;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.bigboxes{
+  display: flex;
+  justify-content: space-around;
+}
+
+.descriptionAbout{
+  font-size: 22px;
+  padding: 25px;
+}
+
+.boxes div{
+  width: 100px;
+  height: 100px;
+  background-color: #ADC8F7;
+}
+
+.input{
+  width: 150px;
+  height: 40px;
+  border: 1px dotted dodgerblue;
+  background-color: #ADC8F7;
+  padding-left: 30px;
+  position: absolute;
+  margin-left: 50px;
+}
+
+.firstTripArrow{
+  position: absolute;
+}
+
+.aboutPoznan{
+  padding: 60px;
+  font-size: 20px;
+  text-align: -webkit-center;
+  font-family: 'Dancing Script', cursive;
+  background-color: #ADC8F7;
+  border: 2px dotted #4984EB;
+  margin-top: 40px;
+  margin-bottom: 50px;
+}
+
+.map{
+  width: 1256px;
+  height: 600px;
+  border-radius: 50%;
+  border: 3px dotted #4984EB;
+  margin-left: 50px;
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+
+.whatAdmire{
+
+}
+
+.contactAuthor{
+  background-color: navy;
+  height: 300px;
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.contactAuthor p{
+  color:white;
+  text-align: center;
+  font-size: 20px;
+  padding-top: 20px;
+  font-family: 'Dancing Script', cursive;
+}
+
+h4{
+  color:white;
+  font-family: 'Dancing Script', cursive;
+  font-size: 30px;
+  text-align: center;
+}
+
+.contactAuthor button{
+  width:200px;
+  height: 50px;
+  text-align: center;
+  color: dodgerblue;
+}
