@@ -118,7 +118,7 @@ class MainMapComponent extends React.Component{
                 ref={ref=>this.onSearchBoxMounted(ref,'searchBox')}
                 onPlacesChanged={()=>this.onPlacesChanged('searchBox')}
                 >
-                <input type='text' placeholder='Znajdź na mapie' className='input container'/>
+                <input type='text' placeholder='Znajdź na mapie' className='input'/>
                 </StandaloneSearchBox>
 
 
@@ -130,7 +130,6 @@ class MainMapComponent extends React.Component{
             />
             </div>
             </div>
-
         )
     }
 }
@@ -348,7 +347,6 @@ class Header extends React.Component{
             <div className="header">
                 {/*<h1>Pomysł na weekend</h1>*/}
                 <TextTyper text="Pomysł na weekend..."/>
-                {/*<Slider sliderWidth="400" sliderHeight="250"/>*/}
             </div>
 
         )
@@ -454,83 +452,6 @@ class MainTemplate extends React.Component{
    }
 }
 
-//SLIDER
-class Slider extends React.Component{
-    constructor(props){
-        super(props);
-        this.state={
-            slider: [1,2,3,4],
-            activateIndex:1,
-            left:0
-             }
-        }
-
-        prevSlide = ()=>{
-        this.setState({
-            activeIndex:this.state.activateIndex-1,
-            left:this.state.left
-        });
-            if (this.state.activeIndex === 1) {
-                this.setState({
-                    activeIndex: this.state.activeIndex + this.state.slider.length - 1,
-                    left: this.state.left - this.props.sliderWidth * (this.state.slider.length - 1)
-                })
-            }
-        };
-
-    nextSlide = ()=> {
-        this.setState({
-            activeIndex: this.state.activateIndex + 1,
-            left: this.state.left
-        });
-        if (this.state.activeIndex === this.state.slider.length) {
-            this.setState({
-                activeIndex: this.state.activeIndex - this.state.slider.length + 1,
-                left: 0
-            })
-        }
-
-    };
-
-clickIndicator=(e)=> {
-    this.setState({
-        activeIndex: parseInt(e.target.textContent),
-        left: this.props.sliderWidth - parseInt(e.target.textContent) * this.props.sliderWidth
-    })
-};
-
-    render(){
-        return(
-            <div>
-                <div  className="slider-wrapper">
-                    <ul className="slider">
-                        {this.state.slider.map(function(item,index) {
-                            return (
-                                <li className={index+1 === this.state.activeIndex ? 'slider-item' : 'hide'}>{item}</li>
-
-                            )
-                        },this)
-                        }
-                    </ul>
-                </div>
-                <div className="buttons-wrapper">
-                    <button className="prev-button" onClick={this.prevSlide}></button>
-                    <button className="next-button" onClick={this.nextSlide}></button>
-                </div>
-                <div className="indicators-wrapper">
-                    <ul className="indicators">
-                        {this.state.slider.map(function(item,index) {
-                            return (
-                                <li className={index+1 === this.state.activeIndex ? 'active-indicator' : ''} onClick={this.clickIndicator}>{index+1}</li>
-                            )
-                        },this)
-                        }
-                    </ul>
-                </div>
-            </div>
-        )
-    }
-}
 
 class App extends React.Component{
     render(){
