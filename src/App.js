@@ -139,19 +139,19 @@ class CrazyDiv extends React.Component{
     constructor (props){
         super(props);
         this.state={
-            name:''
+            name:'Lasy i jeziora'
         }
     }
 
     changeposition=()=>{
         this.setState({
-            name:'Szkoda czasu! Ruszaj w drogę :)'
+            name:'Ruszaj w drogę :)'
         })
     };
 
     changeposition1=()=>{
         this.setState({
-            name:''
+            name:'Lasy i jeziora'
         })
     };
 
@@ -159,7 +159,7 @@ class CrazyDiv extends React.Component{
     return(
         <div className="img5 square" onMouseEnter={this.changeposition} onMouseLeave={this.changeposition1}>
 
-            <span style={{fontSize:'30px' ,textAlign:'center'}}>{this.state.name} {this.state.width} {this.state.height}</span>
+            <span style={{fontSize:'40px' ,textAlign:'center'}}>{this.state.name} {this.state.width} {this.state.height}</span>
         </div>
          )
     }
@@ -250,7 +250,13 @@ class Footer extends React.Component{
                      <button>Klik</button>
                  </div>
                  <div className="footer">
-                     <p> Pomysł na weekend Blog. Wszelkie prawa zastrzeżone &copy; 2018</p>
+                     <div className="media facebook"><i className="fab fa-facebook-f" ></i></div>
+                     <div className="media twitter"><i className="fab fa-twitter"></i></div>
+                     <div className="media linkedin"><i className="fab fa-linkedin-in"></i></div>
+                     <div className="media instagram"><i className="fab fa-instagram"></i></div>
+                 </div>
+                 <div className="endFooter">
+                 <p> Pomysł na weekend Blog. Wszelkie prawa zastrzeżone &copy; 2018</p>
                  </div>
           </div>
          )

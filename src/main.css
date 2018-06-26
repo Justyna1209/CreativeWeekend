@@ -109,7 +109,7 @@ div.img4:hover {
   cursor: pointer; }
 
 div.img5 {
-  background-image: url("https://comps.canstockphoto.com/funny-tv-cartoon-image_csp10941670.jpg");
+  background-image: url("http://www.przymuszewo.torun.lasy.gov.pl/image/image_gallery?uuid=525fd3a1-12b7-4423-b12a-687024a4110e&groupId=427062&t=1391415925310");
   background-size: cover;
   color: blue; }
 
@@ -186,7 +186,39 @@ button {
 .footer {
   height: 200px;
   margin-top: 20px;
-  background-color: #4984EB; }
+  background-color: #4984EB;
+  display: flex;
+  justify-content: space-around; }
+
+.endFooter {
+  height: 60px;
+  text-align: center;
+  padding-top: 20px;
+  font-size: 20px; }
+
+.media {
+  width: 200px;
+  height: 200px;
+  background-color: #4984EB;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.media i {
+  color: white;
+  font-size: 90px; }
+
+.media.facebook:hover {
+  background-color: #3b5998; }
+
+.media.twitter:hover {
+  background-color: #0084b4; }
+
+.media.linkedin:hover {
+  background-color: #0077b5; }
+
+.media.instagram:hover {
+  background: linear-gradient(to bottom left, #8a3ab9, #cd486b, #fccc63, #fbad50); }
 
 .hamburger {
   width: 250px;
