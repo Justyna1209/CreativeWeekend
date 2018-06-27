@@ -44,6 +44,7 @@ class FirstTrip extends React.Component{
     render(){
         return(
             <div>
+                <NavLink to="/"><i className="fas fa-arrow-alt-circle-left firstTripArrow"></i></NavLink>
             <div className="header1">
                 <h1>Poznań</h1>
             </div>
@@ -58,8 +59,9 @@ class FirstTrip extends React.Component{
                 <div className="whatAdmire">
 
                 </div>
+                <MainMapComponent/>
+                <Footer/>
             </div>
-
         )
     }
 }
@@ -111,8 +113,6 @@ class MainMapComponent extends React.Component{
         console.log(this.state);
         return(
             <div>
-            <NavLink to="/"><i className="fas fa-arrow-alt-circle-left firstTripArrow"></i></NavLink>
-            <FirstTrip/>
             <div className="to">
                 <StandaloneSearchBox
                 ref={ref=>this.onSearchBoxMounted(ref,'searchBox')}
@@ -364,34 +364,18 @@ class AboutUs extends React.Component{
         return(
             <div>
                 <NavLink to="/"><i className="fas fa-arrow-alt-circle-left"></i></NavLink>
-                <p className='p'>Witaj na naszym blogu ;)</p>
+                <div className="heading"><p className='p'>Witaj na naszym blogu ;)</p></div>
                 <div className="bigboxes">
                 <div className="boxes">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
+                    <div className="white"><div className='img1AboutUs'></div></div>
+                    <div className='img2AboutUs'></div>
+                    <div className='img3AboutUs'></div>
+                    <div className='img4AboutUs'></div>
+                    <div className='img5AboutUs'></div>
+                    <div className='img6AboutUs'></div>
+                    <div className='img7AboutUs'></div>
+                    <div className='img8AboutUs'></div>
+                    <div className="white"><div className='img9AboutUs'></div></div>
                 </div>
                 <div className="aboutUs">
                     <p className="descriptionAbout">
@@ -399,6 +383,7 @@ class AboutUs extends React.Component{
                     </p>
                 </div>
                 </div>
+                <Footer/>
             </div>
         )
     }
@@ -475,7 +460,7 @@ class App extends React.Component{
                     <Route path="/about/sea" component={Sea}/>
                     <Route path="/about/city" component={City}/>
                     <Route path="/contact" component={Contact}/>
-                    <Route path="/about/yourIdea" component={MainMapComponent}/>
+                    <Route path="/about/yourIdea" component={FirstTrip}/>
 
                 </MainTemplate>
             </HashRouter>

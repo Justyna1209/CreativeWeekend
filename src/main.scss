@@ -308,8 +308,8 @@ button{
 }
 
 .boxes{
-  height: 504px;
-  width: 504px;
+  height: 498px;
+  width: 498px;
   border:3px dotted dodgerblue;
   margin-top: 50px;
   margin-bottom: 50px;
@@ -317,16 +317,22 @@ button{
   flex-wrap: wrap;
 }
 
+.heading{
+  height: 100px;
+  background-color: #4984EB;
+}
 .p{
   text-align: center;
   font-size: 50px;
   font-family: 'Dancing Script', cursive;
   margin: 0;
+  padding-top: 20px;
+  color: white;
 }
 
 .aboutUs{
-  height: 500px;
-  width: 500px;
+  height: 498px;
+  width: 498px;
   border:3px dotted dodgerblue;
   margin-top: 50px;
   margin-bottom: 50px;
@@ -339,13 +345,60 @@ button{
 
 .descriptionAbout{
   font-size: 22px;
-  padding: 25px;
+  padding: 35px;
+  font-family: 'Dancing Script', cursive;
+  text-align: -webkit-center;
 }
 
-.boxes div{
-  width: 100px;
-  height: 100px;
-  background-color: #ADC8F7;
+.boxes div {
+  width: 166px;
+  height: 166px;
+  background-color: white;
+}
+
+.boxes div.img5AboutUs{
+  background-image: url("https://podroze.smcloud.net/t/photos/t/136904/jeziora-w-polsce-15-malowniczych-jezior-ktorymi_1028499.jpg");
+  background-size: cover;
+}
+
+.boxes div.img1AboutUs{
+  position: relative;
+  animation-name: example;
+  animation-duration: 4s;
+  animation-iteration-count: 2;
+  animation-direction:  alternate-reverse;
+  animation-timing-function: linear;
+}
+
+.boxes div.img9AboutUs{
+  position: relative;
+  animation-name: example1;
+  animation-duration: 4s;
+  animation-iteration-count: 2;
+  animation-direction: alternate-reverse;
+  animation-timing-function: linear;
+}
+
+@keyframes example1 {
+  0%   {background-image:url("https://www.glamour.pl/media/cache/default_view/uploads/media/default/0003/71/bieszczady.jpeg"); background-size:cover;left:0px; top:0px;}
+  25%  {background-image:url("https://www.glamour.pl/media/cache/default_view/uploads/media/default/0003/71/bieszczady.jpeg"); background-size:cover;left:-332px; top:0px;}
+  50%  {background-image:url("https://wf4.xcdn.pl/files/13/10/10/392745_800pxSOLINAZAPORA_I_JEZIORO_83.jpg");background-size:cover; left:-332px; top:-332px;}
+  75%  {background-image:url("http://5.s.dziennik.pl/pliki/10398000/10398875-tatry-900-600.jpg"); left:-0px;background-size:cover; top:-332px;}
+  100% {background-image:url("http://1.bp.blogspot.com/-LcLD9Z1iLLg/U76jgh3j9wI/AAAAAAAAI-A/fVh5naDYtqM/s1600/_DSC4961.jpg");background-size:cover; left:-0px; top:-0px;}
+}
+
+@keyframes example {
+  0%   {background-image:url("https://ocs-pl.oktawave.com/v1/AUTH_f9dd5582-c0b6-4b27-a573-ecf06cf3ef09/tropter/uploads/attachments/a2d7b426caf3aefc6d7f9cec86eb71cacf1183b3/preview.jpeg?t=201708311631"); background-size:cover; left:0px; top:0px;}
+  25%  {background-image:url("https://ocs-pl.oktawave.com/v1/AUTH_f9dd5582-c0b6-4b27-a573-ecf06cf3ef09/tropter/uploads/attachments/a2d7b426caf3aefc6d7f9cec86eb71cacf1183b3/preview.jpeg?t=201708311631"); background-size:cover; left:332px; top:0px;}
+  50%  {background-image:url("https://meteor-turystyka.pl/images/base/21/20395/30516_40.jpg"); background-size:cover; left:332px; top:332px;}
+  75%  {background-image:url("https://i.ytimg.com/vi/NSDizvdBvBQ/maxresdefault.jpg"); background-size:cover; left:0px; top:332px;}
+  100% {background-image:url("https://uml.lodz.pl/files/public/_processed_/4/6/csm_IMG_9999_ef12ebdf60.jpg"); background-size:cover;left:0px; top:0px;}
+}
+
+.boxes.white{
+  position: relative;
+  animation-name: example1;
+  animation-duration: 4s;
 }
 
 .input{
