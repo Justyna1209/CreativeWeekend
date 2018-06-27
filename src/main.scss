@@ -353,7 +353,7 @@ button{
 .boxes div {
   width: 166px;
   height: 166px;
-  background-color: white;
+  background-color: transparent;
 }
 
 .boxes div.img5AboutUs{
@@ -368,6 +368,8 @@ button{
   animation-iteration-count: 2;
   animation-direction:  alternate-reverse;
   animation-timing-function: linear;
+  background-image:url("https://www.glamour.pl/media/cache/default_view/uploads/media/default/0003/71/bieszczady.jpeg");
+  background-size: cover;
 }
 
 .boxes div.img9AboutUs{
@@ -377,7 +379,10 @@ button{
   animation-iteration-count: 2;
   animation-direction: alternate-reverse;
   animation-timing-function: linear;
+  background-size: cover;
+  background-image: url("https://ocs-pl.oktawave.com/v1/AUTH_f9dd5582-c0b6-4b27-a573-ecf06cf3ef09/tropter/uploads/attachments/a2d7b426caf3aefc6d7f9cec86eb71cacf1183b3/preview.jpeg?t=201708311631");
 }
+
 
 @keyframes example1 {
   0%   {background-image:url("https://www.glamour.pl/media/cache/default_view/uploads/media/default/0003/71/bieszczady.jpeg"); background-size:cover;left:0px; top:0px;}
@@ -395,17 +400,113 @@ button{
   100% {background-image:url("https://uml.lodz.pl/files/public/_processed_/4/6/csm_IMG_9999_ef12ebdf60.jpg"); background-size:cover;left:0px; top:0px;}
 }
 
-.boxes.white{
+.boxes div.img2AboutUs{
+  width: 166px;
+  height: 166px;
+  background-color: transparent;
   position: relative;
-  animation-name: example1;
-  animation-duration: 4s;
+  animation-name: show;
+  animation-duration: 28s;
+  animation-iteration-count: infinite;
+  background-size: cover;
+}
+
+@keyframes show {
+  from {background-color: transparent}
+  to {background-image: url("http://1.bp.blogspot.com/-LcLD9Z1iLLg/U76jgh3j9wI/AAAAAAAAI-A/fVh5naDYtqM/s1600/_DSC4961.jpg");}
+}
+
+.boxes div.img3AboutUs{
+  width: 166px;
+  height: 166px;
+  background-color: transparent;
+  position: relative;
+  animation-name: show1;
+  animation-duration: 28s;
+  animation-iteration-count: infinite;
+  background-size: cover;
+}
+
+@keyframes show1 {
+  from {background-color: transparent}
+  to {background-image: url("https://wf4.xcdn.pl/files/13/10/10/392745_800pxSOLINAZAPORA_I_JEZIORO_83.jpg");}
+}
+
+.boxes div.img4AboutUs{
+  width: 166px;
+  height: 166px;
+  background-color: transparent;
+  position: relative;
+  animation-name: show2;
+  animation-duration: 28s;
+  animation-iteration-count: infinite;
+  background-size: cover;
+}
+
+@keyframes show2 {
+  from {background-color: transparent}
+  to {background-image: url("https://meteor-turystyka.pl/images/base/21/20395/30516_40.jpg");}
+}
+
+.boxes div.img6AboutUs{
+  width: 166px;
+  height: 166px;
+  background-color: transparent;
+  position: relative;
+  animation-name: show3;
+  animation-duration: 28s;
+  animation-iteration-count: infinite;
+  background-size: cover;
+}
+
+@keyframes show3 {
+  from {background-color: transparent}
+  to {background-image: url("https://uml.lodz.pl/files/public/_processed_/4/6/csm_IMG_9999_ef12ebdf60.jpg");}
+}
+
+
+.boxes div.img7AboutUs{
+  width: 166px;
+  height: 166px;
+  background-color: transparent;
+  position: relative;
+  animation-name: show4;
+  animation-duration: 28s;
+  animation-iteration-count: infinite;
+  background-size: cover;
+}
+
+@keyframes show4 {
+  from {background-color: transparent}
+  to {background-image: url("http://5.s.dziennik.pl/pliki/10398000/10398875-tatry-900-600.jpg");}
+}
+
+.boxes div.img8AboutUs{
+  width: 166px;
+  height: 166px;
+  background-color: transparent;
+  position: relative;
+  animation-name: show5;
+  animation-duration: 28s;
+  animation-iteration-count: infinite;
+  background-size: cover;
+}
+
+@keyframes show5 {
+  from {background-color: transparent}
+  to {background-image: url("https://i.ytimg.com/vi/NSDizvdBvBQ/maxresdefault.jpg");}
+}
+
+.boxes .white {
+  width: 166px;
+  height: 166px;
+  background-color: transparent;
 }
 
 .input{
   width: 150px;
   height: 40px;
-  border: 1px dotted dodgerblue;
-  background-color: #ADC8F7;
+  background-color:white;
   padding-left: 30px;
   //position: absolute;
   margin-left: 50px;
@@ -427,17 +528,88 @@ button{
 }
 
 .map{
-  width: 1256px;
   height: 600px;
-  border-radius: 50%;
   border: 3px dotted #4984EB;
   margin-left: 50px;
+  float: left;
+}
+//TRIP-POZNAN
+.whatAdmire {
+  height: 400px;
+  background-color: #3b5998;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
   margin-bottom: 50px;
-  margin-top: 50px;
 }
 
-.whatAdmire{
+.container1 .imgPoznan{
+  background-image: url("https://i.wpimg.pl/O/644x457/d.wpimg.pl/756474958-425907370/pozna%C5%84.jpg");
+  background-size: cover;
+  display: block;
+  width: 300px;
+  height: 300px;
+}
 
+.container1 .imgPoznan2{
+  background-image: url("https://www.tapetus.pl/obrazki/n/250017_katedra-poznanska-poznan-most-biskupa-jordana.jpg");
+  background-size: cover;
+  display: block;
+  width: 300px;
+  height: 300px;
+}
+
+.container1 .imgPoznan3{
+  background-image: url("http://167.114.250.81/fbl-2009/200905/39393120.jpg");
+  background-size: cover;
+  display: block;
+  width: 300px;
+  height: 300px;
+}
+
+.container1 .imgPoznan4{
+  background-image: url("http://hotele-poznan-centrum.pl/galeria/05-jezioro-maltanskie-poznan.jpg");
+  background-size: cover;
+  display: block;
+  width: 300px;
+  height: 300px;
+}
+
+.container1{
+  position: relative;
+}
+
+.imgOverlay{
+  display: block;
+  width: 300px;
+  height: 300px;
+}
+
+.overlay1 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #008CBA;
+  opacity: 0.8;
+  overflow: hidden;
+  width: 300px;
+  height: 40px;
+  transition: .5s ease;
+}
+
+.container1:hover .overlay1 {
+  height: 100%;
+}
+
+.text2 {
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  overflow: hidden;
+  font-family: 'Dancing Script', cursive;
 }
 
 .contactAuthor{
@@ -463,6 +635,7 @@ h4{
   font-family: 'Dancing Script', cursive;
   font-size: 30px;
   text-align: center;
+  padding-bottom: 10px;
 }
 
 .contactAuthor button{
@@ -472,4 +645,37 @@ h4{
   color: dodgerblue;
 }
 
+.to{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
 
+.moreInfoPoznan{
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+button.moreInfo{
+  background-color: #3574ff;
+  border: none;
+  padding: 15px 32px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  margin: 15px 2px;
+  cursor: pointer;
+  transition-duration: 0.4s;
+}
+
+button.moreInfo a{
+  text-decoration: none;
+  color: white;
+}
+
+button.moreInfo:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}

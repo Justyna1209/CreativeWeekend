@@ -35,7 +35,7 @@ import
 //     }
 // }
 
-// MAPA
+// MAPA and FIRSTTRIP
 import {withGoogleMap, GoogleMap, Marker}from "react-google-maps"
 const {StandaloneSearchBox}=require("react-google-maps/lib/components/places/StandaloneSearchBox");
 
@@ -52,12 +52,61 @@ class FirstTrip extends React.Component{
                     <div className="aboutPoznan">
                         <h2>Tej Nu Dalij Na Pyrkę :)</h2>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae cum, eaque enim error eveniet ipsa labore mollitia necessitatibus, quam quisquam quo reiciendis sint ullam? Consequatur, eaque, expedita. Aliquam asperiores beatae consequatur cupiditate, deleniti earum est eum expedita harum, illo inventore iure iusto libero molestiae necessitatibus neque numquam odit perferendis quidem ratione recusandae repellat saepe sed sint sunt ullam veritatis voluptates. Accusantium alias at commodi consequuntur dicta dolore earum et eveniet facere fugit in itaque magnam maiores, officiis omnis quasi qui quidem quo recusandae sed vel, velit vero voluptas, voluptatem voluptatibus. Amet atque consectetur, corporis cupiditate dolor doloremque, ducimus eaque eius esse, et exercitationem expedita facere hic impedit non quae quisquam quo repudiandae sapiente soluta tenetur vel vitae voluptatum? Accusamus adipisci dolorum error esse facilis illum, impedit, incidunt ipsam officia pariatur recusandae reprehenderit suscipit tempore? Culpa eveniet iste laboriosam maxime, nostrum perferendis praesentium quibusdam! Animi fugiat, illo minus modi natus rerum sed. Accusantium aperiam explicabo facere ipsa libero? Autem rerum saepe tempora? Accusamus, alias asperiores consequuntur, cum debitis deleniti fugiat in mollitia nesciunt non officia officiis possimus quas quidem repellat repellendus sit unde voluptas? Ad aspernatur blanditiis dolore dolorum error harum ipsam molestiae nulla quis ratione rem tempora totam ut, vitae!
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae cum, eaque enim error eveniet ipsa labore mollitia necessitatibus, quam quisquam quo reiciendis sint ullam? Consequatur, eaque, expedita. Aliquam asperiores beatae consequatur cupiditate, deleniti earum est eum expedita harum, illo inventore iure iusto libero molestiae necessitatibus neque numquam odit perferendis quidem ratione recusandae repellat saepe sed sint sunt ullam veritatis voluptates. Accusantium alias at commodi consequuntur dicta dolore earum et eveniet facere fugit in itaque magnam maiores, officiis omnis quasi qui quidem quo recusandae sed vel, velit vero voluptas, voluptatem voluptatibus. Amet atque consectetur, corporis cupiditate dolor doloremque, ducimus eaque eius esse, et exercitationem expedita facere hic impedit non quae quisquam quo repudiandae sapiente soluta tenetur vel vitae voluptatum? Accusamus adipisci dolorum error esse facilis illum, impedit, incidunt ipsam officia pariatur recusandae.
                     </p>
                     </div>
                 </div>
-                <div className="whatAdmire">
+                <h4 className="container" style={{backgroundColor:"#3b5998"}}>Najlepsze atrakcje</h4>
+                <div className="whatAdmire container">
+                    <div className="container1">
+                        <div className="imgPoznan"></div>
+                        <div>
+                            <div className="overlay1">
+                                <div className="text2">
+                                    <h4>Poznański Stary Rynek</h4>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda commodi, cumque distinctio dolores ex id incidunt ipsa itaque laudantium necessitatibus, nihil recusandae repudiandae sapiente sed suscipit, ut voluptas voluptate. Accusamus ad, aliquid debitis ducimus eius enim.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
+                    <div className="container1">
+                        <div className="imgPoznan2"></div>
+                        <div>
+                            <div className="overlay1">
+                                <div className="text2">
+                                    <h4>Katedra Poznańska</h4>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda commodi, cumque distinctio dolores ex id incidunt ipsa itaque laudantium necessitatibus, nihil recusandae repudiandae sapiente sed suscipit, ut voluptas voluptate. Accusamus ad, aliquid debitis ducimus eius enim.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div className="container1">
+                        <div className="imgPoznan3"></div>
+                        <div>
+                            <div className="overlay1">
+                                <div className="text2">
+                                    <h4>Zamek Poznański</h4>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda commodi, cumque distinctio dolores ex id incidunt ipsa itaque laudantium necessitatibus, nihil recusandae repudiandae sapiente sed suscipit, ut voluptas voluptate. Accusamus ad, aliquid debitis ducimus eius enim.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="container1">
+                        <div className="imgPoznan4"></div>
+                        <div>
+                            <div className="overlay1">
+                                <div className="text2">
+                                    <h4>Jezioro Maltańskie</h4>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda commodi, cumque distinctio dolores ex id incidunt ipsa itaque laudantium necessitatibus, nihil recusandae repudiandae sapiente sed suscipit, ut voluptas voluptate. Accusamus ad, aliquid debitis ducimus eius enim.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p style={{color:"white"}}>Zobacz cały wpis o Poznaniu :)  >></p>
                 </div>
                 <MainMapComponent/>
                 <Footer/>
@@ -113,12 +162,14 @@ class MainMapComponent extends React.Component{
         console.log(this.state);
         return(
             <div>
+                <h4 style={{color:"blue"}}>Przydatne strony</h4>
             <div className="to">
+                <div className="mapInput">
                 <StandaloneSearchBox
                 ref={ref=>this.onSearchBoxMounted(ref,'searchBox')}
                 onPlacesChanged={()=>this.onPlacesChanged('searchBox')}
                 >
-                <input type='text' placeholder='Znajdź na mapie' className='input'/>
+                <input type='text' placeholder='Wpisz miejscowość' className='input'/>
                 </StandaloneSearchBox>
 
 
@@ -126,8 +177,15 @@ class MainMapComponent extends React.Component{
                 markerShown={this.state.searchBox}
                 loadingElement={<div style={{ height: `100%` }} />}
                 containerElement={<div style={{ height: `400px` }} />}
-                mapElement={<div style={{ height: `100%` }} className="map container"/>}
+                mapElement={<div style={{ height: `100%` ,width:`500px`}} className="map "/>}
             />
+                </div>
+                <div className="moreInfoPoznan">
+                    <button className="moreInfo"><a style={{display: "block"}} href="https://maciej.je/na-miescie/poznan/gdzie-zjesc-w-poznaniu-najlepsze-z-najlepszych/" target="_blank">Najlepsze restauracje</a></button>
+                    <button className="moreInfo"><a style={{display: "block"}} href="http://www.hotelewpoznaniu.eu/" target="_blank">Baza hoteli Poznań</a></button>
+                    <button className="moreInfo"><a style={{display: "block"}}  href="https://jakdojade.pl/poznan/trasa/" target="_blank">Jak poruszać się po mieście</a></button>
+                    <button className="moreInfo"><a style={{display: "block"}}  href="http://www.poznan.pl/" target="_blank">Strona miasta</a></button>
+                </div>
             </div>
             </div>
         )
