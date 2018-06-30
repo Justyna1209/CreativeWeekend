@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import cities from './data.js';
-
 import
 {
     HashRouter,
@@ -10,34 +9,77 @@ import
     NavLink,
 } from 'react-router-dom';
 
+import { findDOMNode } from 'react-dom';
 
-// class Slider extends React.Component{
-//     constructor(props){
-//         super(props);
-//         this.state={
-//             img1:<img src="http://www.tapetus.pl/obrazki/n/218519_jezioro-gory-tatry-wysokie-morskie-oko.jpg"/>
-//
-//         };
-//     }
-//     componentDidMount(){
-//         this.timeoutId=setTimeout(()=>{
-//             this.setState({
-//                 img1:<img src="http://thepinesgrantown.co.uk/wp-content/uploads/2015/06/kitzbuheler_horn.jpg"/>
-//
-//             })
-//         },3000)
-//     }
-//     componentWillUnmount(){
-//         clearTimeout(this.timeoutId)
-//     }
-//     render(){
-//         return <div>{this.state.img1}</div>
-//     }
-// }
 
-// MAPA and FIRSTTRIP
+
 import {withGoogleMap, GoogleMap, Marker}from "react-google-maps"
 const {StandaloneSearchBox}=require("react-google-maps/lib/components/places/StandaloneSearchBox");
+// // class Slider extends React.Component{
+// //     constructor(props){
+// //         super(props);
+// //         this.state={
+// //             img1:<img src="http://www.tapetus.pl/obrazki/n/218519_jezioro-gory-tatry-wysokie-morskie-oko.jpg"/>
+// //
+// //         };
+// //     }
+// //     componentDidMount(){
+// //         this.timeoutId=setTimeout(()=>{
+// //             this.setState({
+// //                 img1:<img src="http://thepinesgrantown.co.uk/wp-content/uploads/2015/06/kitzbuheler_horn.jpg"/>
+// //
+// //             })
+// //         },3000)
+// //     }
+// //     componentWillUnmount(){
+// //         clearTimeout(this.timeoutId)
+// //     }
+// //     render(){
+// //         return <div>{this.state.img1}</div>
+// //     }
+// // }
+//
+//MoveDescription-wpis o Poznaniu
+
+class MoveDescription extends React.Component{
+    constructor(props){
+        super(props);
+        this.state={
+            display:'none',
+        };
+    }
+
+    show=()=>{
+        this.setState({
+            display:'block',
+        })
+    };
+
+    hide=()=>{
+        this.setState({
+        display:'none'
+    })
+    };
+    render(){
+        return(
+            <div>
+                <div>
+                    <button onClick={this.show} className="see"><span>Zobacz cały wpis o Poznaniu :)</span><span className="arrowDown"></span></button>
+                </div>
+                <div style={{display:this.state.display}} className=' descriptionPoznan container'>
+                    >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias assumenda consequuntur dicta distinctio maiores officia repellendus saepe! Adipisci, corporis doloremque explicabo iusto nemo nihil sunt. Animi esse facere quod voluptates.
+                    <span onClick={this.hide}><i className="fas fa-times-circle"></i></span>
+                </div>
+
+            </div>
+        )
+    }
+
+}
+
+
+// MAPA and FIRSTTRIP
+
 
 
 class FirstTrip extends React.Component{
@@ -106,8 +148,11 @@ class FirstTrip extends React.Component{
                             </div>
                         </div>
                     </div>
-                    <p style={{color:"white"}}>Zobacz cały wpis o Poznaniu :)  >></p>
+                    <MoveDescription/>
+                    {/*<button className="see"><span>Zobacz cały wpis o Poznaniu :)</span><span className="arrowDown"></span></button>*/}
                 </div>
+
+
                 <MainMapComponent/>
                 <Footer/>
             </div>
@@ -163,7 +208,7 @@ class MainMapComponent extends React.Component{
         return(
             <div>
                 <h4 style={{color:"blue"}}>Przydatne strony</h4>
-            <div className="to">
+            <div className="to container">
                 <div className="mapInput">
                 <StandaloneSearchBox
                 ref={ref=>this.onSearchBoxMounted(ref,'searchBox')}
@@ -180,7 +225,7 @@ class MainMapComponent extends React.Component{
                 mapElement={<div style={{ height: `100%` ,width:`500px`}} className="map "/>}
             />
                 </div>
-                <div className="moreInfoPoznan">
+                <div className="moreInfoPoznan container">
                     <button className="moreInfo"><a style={{display: "block"}} href="https://maciej.je/na-miescie/poznan/gdzie-zjesc-w-poznaniu-najlepsze-z-najlepszych/" target="_blank">Najlepsze restauracje</a></button>
                     <button className="moreInfo"><a style={{display: "block"}} href="http://www.hotelewpoznaniu.eu/" target="_blank">Baza hoteli Poznań</a></button>
                     <button className="moreInfo"><a style={{display: "block"}}  href="https://jakdojade.pl/poznan/trasa/" target="_blank">Jak poruszać się po mieście</a></button>

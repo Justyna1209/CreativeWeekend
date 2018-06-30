@@ -155,11 +155,12 @@ h3 {
 .number {
   width: 200px;
   height: 200px;
-  background-color: white;
   display: flex;
   justify-content: center;
   align-items: baseline;
-  position: relative; }
+  position: relative;
+  background-image: url("https://www.walldevil.com/wallpapers/w10/nature-lakes-skies-mountains-canada-water.jpg");
+  background-size: cover; }
 
 .number span {
   font-size: 50px;
@@ -170,7 +171,7 @@ h3 {
 .number .span1 {
   font-size: 50px;
   font-family: 'Dancing Script', cursive;
-  color: blue;
+  color: white;
   position: absolute;
   padding-top: 30px;
   text-align: -webkit-center; }
@@ -483,7 +484,7 @@ button {
   height: 40px;
   background-color: white;
   padding-left: 30px;
-  margin-left: 50px; }
+  margin-left: 80px; }
 
 .firstTripArrow {
   position: absolute; }
@@ -501,7 +502,7 @@ button {
 .map {
   height: 600px;
   border: 3px dotted #4984EB;
-  margin-left: 50px;
+  margin-left: 80px;
   float: left; }
 
 .whatAdmire {
@@ -616,13 +617,15 @@ h4 {
 button.moreInfo {
   background-color: #3574ff;
   border: none;
+  width: 500px;
   padding: 15px 32px;
   text-align: center;
   display: inline-block;
   font-size: 16px;
   margin: 15px 2px;
   cursor: pointer;
-  transition-duration: 0.4s; }
+  transition-duration: 0.4s;
+  font-family: Georgia; }
 
 button.moreInfo a {
   text-decoration: none;
@@ -630,3 +633,45 @@ button.moreInfo a {
 
 button.moreInfo:hover {
   box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19); }
+
+button.see {
+  font-size: 14px;
+  padding: 10px;
+  width: 300px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 3px;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #008CBA;
+  border: none;
+  color: #FFFFFF;
+  text-align: center; }
+
+button.see span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+  font-size: 18px;
+  font-family: Georgia; }
+
+button.see span.arrowDown:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  bottom: -40px;
+  transform: rotate(90deg);
+  font-size: 20px;
+  transition: 0.5s; }
+
+button.see:hover span {
+  padding-bottom: 15px;
+  margin-left: -115px; }
+
+button.see:hover span:after {
+  opacity: 1;
+  right: 0; }
+
+.descriptionPoznan {
+  margin-top: 40px; }
