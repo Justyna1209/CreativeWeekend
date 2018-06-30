@@ -8,7 +8,8 @@ Creative weekend is a travel blog with creative ideas for weekend, which was cre
 * React
 * CSS, CSS Animation
 
-![SEE HOW IT LOOKS](./images/creative.png) 
+
+![](./images/creative.png) 
 ![](./images/poznan.png) 
 ![](./images/oNas.png) 
 
