@@ -511,6 +511,14 @@ button {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  align-items: center; }
+
+.whatAdmire1 {
+  height: 80px;
+  background-color: #3b5998;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
   align-items: center;
   margin-bottom: 50px; }
 
@@ -674,4 +682,54 @@ button.see:hover span:after {
   right: 0; }
 
 .descriptionPoznan {
-  margin-top: 40px; }
+  margin-top: 40px;
+  width: 1000px;
+  background-color: white;
+  border: 2px solid dodgerblue; }
+
+div.mainPolaroid {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap; }
+
+div.polaroid {
+  width: 45%;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 25px; }
+
+div.polaroid.church {
+  width: 30%;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 25px; }
+
+div.posen {
+  text-align: center;
+  padding: 10px 20px; }
+
+.plan {
+  line-height: 30px;
+  font-family: Georgia;
+  text-align: justify;
+  padding: 25px; }
+
+h5 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 30px;
+  font-weight: bold;
+  padding: 10px; }
+
+h6 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 40px;
+  font-weight: bold;
+  color: #3b5998;
+  text-align: center;
+  padding: 25px; }
+
+div a {
+  text-decoration: none;
+  font-family: Georgia;
+  color: #3b5998; }
