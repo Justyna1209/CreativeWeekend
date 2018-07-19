@@ -17,7 +17,6 @@ class Header extends React.Component{
             <div className="header">
                 <MobileMenu/>
                 <TextTyper text="Pomysł na weekend..."/>
-
             </div>
 
         )

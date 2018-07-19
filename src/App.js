@@ -20,6 +20,7 @@ import NoIdeaa from './components/noidea.js';
 import FirstTrip from './components/city.js';
 import Footer from './components/footer.js'
 
+
 // import { findDOMNode } from 'react-dom';
 
 class App extends React.Component{
