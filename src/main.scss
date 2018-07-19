@@ -750,6 +750,7 @@ div.mainPolaroid {
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
+  padding-bottom: 15px;
 }
 
 div.polaroid {
@@ -794,7 +795,7 @@ h6{
   padding: 25px;
 }
 
-div a{
+div .a{
   text-decoration: none;
   font-family: Georgia;
   color: #3b5998;
