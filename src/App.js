@@ -18,6 +18,7 @@ import AboutPoland from './components/poland.js';
 import WhatDirection from './components/direction.js';
 import NoIdeaa from './components/noidea.js';
 import FirstTrip from './components/city.js';
+import CommentBox from './components/comments.js';
 import Footer from './components/footer.js'
 
 
@@ -39,6 +40,7 @@ class App extends React.Component{
                         <Route path="/contact" component={Contact}/>
                         <Route path="/about/yourIdea" component={FirstTrip}/>
                     <Footer/>
+                    <CommentBox/>
                 </main>
             </HashRouter>
         )
