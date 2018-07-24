@@ -8,7 +8,7 @@ The project is still under construction, because it is a blog and I want to make
 * React
 * CSS, CSS Animation
 
- https://justyna1209.github.io/creativeweekend/. 
+ 
 ![](./images/creative.png) 
 ![](./images/poznan.png) 
 ![](./images/oNas.png)
