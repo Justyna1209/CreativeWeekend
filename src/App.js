@@ -20,6 +20,7 @@ import NoIdeaa from './components/noidea.js';
 import FirstTrip from './components/city.js';
 import CommentBox from './components/comments.js';
 import Footer from './components/footer.js'
+import AnimalsMenager from "./components/comments";
 
 
 // import { findDOMNode } from 'react-dom';
@@ -40,7 +41,7 @@ class App extends React.Component{
                         <Route path="/contact" component={Contact}/>
                         <Route path="/about/yourIdea" component={FirstTrip}/>
                     <Footer/>
-                    <CommentBox/>
+                    <AnimalsMenager/>
                 </main>
             </HashRouter>
         )

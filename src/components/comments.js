@@ -6,22 +6,55 @@ import {
     Switch,
     NavLink,
 } from 'react-router-dom';
-//
-// class Comment extends React.Component {
-//     constructor (props){
-//         super (props);
-//     }
-//     render (){
-//         return (
-//             <div className="comment">
-//                 <h2 className="commentAuthor">
-//                     {this.props.author}
-//                 </h2>
-//                 {this.props.text}
-//             </div>
-//         )
-//     }
-// }
+
+class Comment extends React.Component{
+    constructor (props){
+        super (props);
+        this.state={
+            loading: true
+        };
+        this.baseUrl="http://localhost:3001/com"
+    }
+
+    componentDidMount (){
+        fetch(this.baseUrl) //łączymy sie z bazowym url
+            .then(resp => {
+                if (resp.ok)
+                    return resp.json(); //zczytujemy json
+                else
+                    throw new Error("Bład sieci!")
+            }).then(data => {
+            console.log(data);
+            this.setState({
+                loading: false,
+                data, //wrzucamy dane w dataSet, gdy się uruchomi - uruchamia ponownie metodę renderującą
+
+            })
+        }).catch(err => {
+            console.log(err);
+        });
+    }
+
+    render() {
+        if (this.state.loading) {
+            return <h2>ładuję ...</h2>
+        }
+
+        const comments = this.state.data.map((com, i) => {
+            return (
+                <li key={com.id}>
+                    <h2>{com.author}</h2>
+                    <h3>{com.text}</h3>
+                </li>
+            )
+        });
+        return <div>
+            <ul>{comments}</ul>
+        </div>;
+    }
+
+}
+
 
 class CommentBox extends React.Component{
     constructor (props){
@@ -45,6 +78,7 @@ class CommentBox extends React.Component{
                        'Content-Type': 'application/json'
                    }
                })
+
             .then(res => {
                if (res.ok)
                    return res.json();
@@ -80,7 +114,8 @@ class CommentBox extends React.Component{
                            type="text"
                            placeholder='podaj imię'
                            onChange={this.handleNameChange}
-                           value={this.state.author}/>
+                           value={this.state.author}
+                    />
 
                     <textarea id="text"
                               placeholder='komentarz'
@@ -90,128 +125,10 @@ class CommentBox extends React.Component{
                     <button type='submit' onClick={this.addComments}>Dodaj komentarz</button>
                     </div>
                 </form>
-                {/*<Comment author={<h1>{this.state.author}</h1>}*/}
-                {/*text={<p>{this.state.text}</p>}/>*/}
+                <Comment/>
             </div>
-
-
         )
 }
 }
-
-
-
-
-
-// // WYŚWIETLENIE BAZY DANYCH
-// class CommentBox extends React.Component{
-//     constructor (props){
-//         super (props);
-//         this.state={
-//             loading: true
-//         };
-//         this.baseUrl="http://localhost:3001/comments"
-//     }
-//    
-//     componentDidMount (){
-//         fetch(this.baseUrl) //łączymy sie z bazowym url
-//             .then(resp => {
-//                 if (resp.ok)
-//                     return resp.json(); //zczytujemy json
-//                 else
-//                     throw new Error("Bład sieci!")
-//             }).then(data => {
-//             console.log(data);
-//             this.setState({
-//                 loading: false,
-//                 data, //wrzucamy dane w dataSet, gdy się uruchomii - uruchaia ponownie metodę renderującą
-//
-//             })
-//         }).catch(err => {
-//             console.log(err);
-//         });
-//     }
-//
-//     render() {
-//         if (this.state.loading) {
-//             return <h2>ładuję ...</h2>
-//         }
-//
-//         const comments = this.state.data.map((user, i) => {
-//             return (
-//                 <li key={user.author}>
-//                     <h3>{user.text}</h3>
-//                  
-//                     {/*<button onClick={() => this.deleteCar(car.id, i)}>sprzedany</button>*/}
-//                 </li>
-//             )
-//         });
-//         return <div>
-//             <ul>{comments}</ul>
-//         </div>;
-//     }
-//    
-// }
-
-// class Comment extends React.Component {
-//     constructor (props){
-//         super (props);
-//     }
-//     render (){
-//         return (
-//             <div className="comment">
-//                 <h2 className="commentAuthor">
-//                     {this.props.author}
-//                 </h2>
-//                 {this.props.children}
-//             </div>
-//         )
-//     }
-// }
-//
-// class CommentForm extends React.Component {
-//     constructor (props){
-//         super (props);
-//     }
-//     render (){
-//         return (
-//             <div className="commentForm">
-//                 Hello two!
-//             </div>
-//         )
-//     }
-// }
-//
-// class CommentList extends React.Component {
-//     constructor (props){
-//         super (props);
-//     }
-//
-//     render (){
-//         return (
-//                 <div className="commentList">
-//                     <Comment author="Pete Hunt">This is one comment</Comment>
-//                     <Comment author="Jordan Walke">This is *another* comment</Comment>
-//                 </div>
-//         )
-//     }
-// }
-//
-// class CommentBox extends React.Component {
-//     constructor (props){
-//         super (props);
-//     }
-//     render (){
-//         return (
-//             <div className="commentBox">
-//                 <h1>Comments</h1>
-//                 <CommentList comments= {this.props.data}/>
-//                 <CommentForm />
-//             </div>
-//         )
-//     }
-// }
-
-
 
 export default CommentBox
