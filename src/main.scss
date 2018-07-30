@@ -800,3 +800,50 @@ div .a{
   font-family: Georgia;
   color: #3b5998;
 }
+
+.commentBox {
+  display: flex;
+  flex-direction: column;
+}
+
+.commentName {
+  border: 1px solid #2fa8ff;
+  height:25px;
+  width: 200px;
+  color: #3b5998;
+  font-family: Georgia;
+  padding: 5px;
+  margin: 20px;
+}
+
+.commentText {
+  border: 1px solid #2fa8ff;
+  height:60px;
+  width: 500px;
+  color: #3b5998;
+  font-family: Georgia;
+  padding: 5px;
+  margin-left: 20px;
+}
+
+.commentAdd {
+  color: #3b5998;
+}
+
+.rating {
+  unicode-bidi: bidi-override;
+  direction: rtl;
+  cursor: pointer;
+}
+.rating > span {
+  color:  #0041ff;
+  display: inline-block;
+  position: relative;
+  width: 1.1em;
+}
+.rating > span:hover:before,
+.rating > span:hover ~ span:before {
+  content: "\2605";
+  position: absolute;
+  color: #0041ff;
+}
