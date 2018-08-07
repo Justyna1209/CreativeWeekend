@@ -70,9 +70,6 @@ class CommentBox extends React.Component{
                            onChange={this.handleNameChange}
                            value={this.state.author}
                     />
-                        <div className="rating">
-                            <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
-                        </div>
                     <textarea className="commentText" id="text"
                               placeholder='Dodaj komentarz'
                               value={this.state.text}
